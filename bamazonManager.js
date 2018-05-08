@@ -133,7 +133,9 @@ function quantitySelection(product) {
         connection.query(
             "UPDATE products SET stock_quantity = ? WHERE item_id = ?", [product.stock_quantity + quantity, product.item_id], function (err, res) {
                 // let user know quantity added successfully
-                console.log("\nSuccessfully added " + product.stock_quantity + " of the " + product.product_name + " to inventory.\n");
+                console.log("=======================================================================");
+                console.log("Successfully added to inventory.");
+                console.log("=======================================================================");
                 // go back to options
                 showOptions();
             }
@@ -176,7 +178,9 @@ function addProduct(products) {
     .then(function(val) {
         connection.query("INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES (?, ?, ?, ?)", [val.product_name, val.department_name, val.price, val.quantity], function (err, res) {
             if (err) throw err;
-            console.log(val.product_name + " has been added to inventory\n");
+            console.log("=======================================================================");
+            console.log(val.product_name + " has been added to inventory.");
+            console.log("=======================================================================");
             showOptions();
         })
     });
