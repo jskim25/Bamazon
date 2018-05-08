@@ -7,11 +7,11 @@ There are two main features to this app: the customer side and manager side. on 
 
 On the manager side, the user is able to do one of four things: view all the products for sale, view low inventory, add inventory, or add a new product.
 
-Getting Started
+## Getting Started
 Open the command line and type in "node bamazonCustomer.js" or "node bamazonManager.js" depending on what you are interested in doing. An inquirer prompt will give you directions each step of the way. There is a cancel command for both in case you'd like to exit the program.
 
-Prerequisites
+## Prerequisites
 For this application to work, you will need to have installed the inquirer, mysql, and console.table npm packages.
 
-Installing
+## Installing
 To install an NPM package, type "npm install" followed by the NPM package name.
